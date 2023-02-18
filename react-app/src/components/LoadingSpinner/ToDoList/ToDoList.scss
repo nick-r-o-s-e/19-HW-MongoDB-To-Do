@@ -1,0 +1,106 @@
+.list-wrapper {
+  width: fit-content;
+  height: fit-content;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 9em;
+    font-family: "EB Garamond", serif;
+    font-weight: 800;
+    color: #a3ff93;
+    text-shadow: black 7px 4px;
+  }
+
+  .list {
+    background-color: #597b53;
+    padding: 1.8em;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 10px rgba($color: #000000, $alpha: 0.3);
+    margin-top: 3em;
+    width: 80%;
+    max-width: 80%;
+
+    .add-task {
+      * {
+        font-size: 1.2em !important;
+      }
+
+      .input-group {
+        box-shadow: 0 0 5px 2px rgba($color: #000000, $alpha: 0.3);
+        border-radius: 5px;
+        margin: 0 !important;
+      }
+
+      button {
+        padding-left: 15px;
+        border-left: none;
+      }
+    }
+    .task-div {
+      border-bottom: 2px solid rgb(58, 87, 58);
+      padding-bottom: 0.6em;
+      .time {
+        text-align: end;
+      }
+    }
+    .task-wrapper {
+      &:first-child {
+        margin-top: 0.8em;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2em;
+      padding-bottom: 0.2em;
+      padding: 0.3em 0;
+
+      .task {
+        display: flex;
+        padding: 0.2em 0;
+
+        label {
+          padding-left: 0.4em;
+          word-break: break-all;
+
+          &.complited {
+            text-decoration: line-through;
+          }
+        }
+
+        input {
+          min-width: 1em !important;
+          translate: -15% 20%;
+          font-size: 0.85em;
+          cursor: pointer;
+        }
+      }
+
+      .delete-task-btn {
+        padding: 0;
+        height: min-content;
+        line-height: 100%;
+        background-color: transparent;
+        border: none;
+        color: #203920;
+        margin-left: 0.5em;
+
+        i {
+          font-size: 0.85em !important;
+        }
+      }
+    }
+  }
+}
+
+.form-check-input:checked {
+  background-color: purple;
+  border-color: rgb(92, 0, 92);
+}
+.form-check-input:focus {
+  border-color: rgba(110, 13, 90, 0.587);
+  box-shadow: 0 0 0 0.15rem rgba(189, 13, 253, 0.25);
+}
